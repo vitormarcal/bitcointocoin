@@ -8,16 +8,16 @@ default: &default
 
 development:
   <<: *default
-  database: V2OneBitExchange_development
+  database: OneBitExchange_development
 
 
 test:
   <<: *default
-  database: V2OneBitExchange_test
+  database: OneBitExchange_test
  
 
 production:
   <<: *default
-  database: V2OneBitExchange_production
+  database: OneBitExchange_production
   username: OneBitExchange
   password: <%= ENV['EXCHANGE_DATABASE_PASSWORD'] %>
