@@ -1,28 +1,27 @@
 <div class='container'>
   <div class='row main'>
-    <div class="exchange">
-      <%= form_tag('/convert', method: :get, class: 'form-inline', id: 'exchange_form') do %>
-        <div class='input-group source'>
-          <div class="input-group-prepend">
-            <span class='input-group-text you-have'>você tem</span>
-          </div>
-          <input type='number' name='amount' id='amount' class='form-control' placeholder='1' step='any' required>
-          <%= select_tag 'source_currency', options_for_select(currency_list, 'BRL'), class: 'form-control', id: 'source_currency' %>
-        </div>
 
-        <div class="input-group ">
-          <i class="material-icons">swap_horiz</i>
+    <div class='col-lg-7  col-md-12 exchange_box'>
+      <div class='row'>
+        <div class='col-md-8 offset-md-2 text-sm-center'>
+          <%= image_tag '/logo.png', class: 'img-fluid'%>
         </div>
+      </div>
 
+      <div class="row">
+        <%= render 'exchange_box' %>
+      </div>
 
-        <div class='input-group target'>
-          <div class="input-group-prepend">
-            <span class='input-group-text you-get'>você recebe</span>
-          </div>
-          <input type='text' id='result' name='result' class='form-control'  readonly>
-          <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency' %>
-        </div>
-      <% end %>
+    </div>
+
+    <div class='col-lg-3 offset-lg-1 hidden-sm-down title-box'>
+      <div class='row'>
+        <h1 class='subtitle'>Converta qualquer moeda do mundo em segundos.</h1>
+      </div>
+
+      <div class='row'>
+        <h2 class='subtitle'>Simples assim.</h2>
+      </div>
     </div>
 
   </div>

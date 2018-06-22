@@ -1,0 +1,24 @@
+<div class="exchange">
+  <%= form_tag('/convert', method: :get, class: 'form-inline', id: 'exchange_form') do %>
+    <div class='input-group source'>
+      <div class="input-group-prepend">
+        <span class='input-group-text you-have'>você tem</span>
+      </div>
+      <input type='number' name='amount' id='amount' class='form-control' placeholder='1' step='any' required>
+      <%= select_tag 'source_currency', options_for_select(currency_list, 'BRL'), class: 'form-control', id: 'source_currency' %>
+    </div>
+
+    <div class="input-group ">
+      <i class="material-icons">swap_horiz</i>
+    </div>
+
+
+    <div class='input-group target'>
+      <div class="input-group-prepend">
+        <span class='input-group-text you-get'>você recebe</span>
+      </div>
+      <input type='text' id='result' name='result' class='form-control'  readonly>
+      <%= select_tag 'target_currency', options_for_select(currency_list, 'EUR'), class: 'form-control', id: 'target_currency' %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,51 @@
+.exchange {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  .you-get,
+  .you-have {
+    @extend .text-uppercase;
+    background-color: #fff!important;
+    border-right: none!important;
+    color: #00cf70;
+    font-weight: bold;
+  }
+
+  .source,
+  .target {
+
+    input, span {
+      background-color: white;
+      box-shadow: none!important;
+      border: 1px solid #ccc!important;
+      border-left: none!important;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    input:focus {
+      z-index: 0;
+    }
+
+    select {
+      border-left: none;
+      background-color: #ececec;
+      font-weight: bold;
+
+      option {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .source {
+    input {
+      padding-left: 2.75em;
+    }
+  }
+
+  i {
+    font-size: 36px;
+    color: #00cf70;
+  }
+}
