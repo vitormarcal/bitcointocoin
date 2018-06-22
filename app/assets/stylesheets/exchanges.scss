@@ -6,6 +6,24 @@ body {
   background-size: cover;
 }
 
+.main {
+  margin-top: 5.2rem;
+}
+
+.title-box {
+  margin-top: 20%;
+  margin-left: 15px;
+}
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+h1,h2 {
+  color: #00cf70;
+}
 
 @media (min-width: 576px) {
   .form-inline, .input-group {
@@ -19,57 +37,6 @@ body {
     flex-flow: row;
     align-items: center;
     width: auto !important;
-  }
-}
-
-
-.exchange {
-
-  .you-get,
-  .you-have {
-    @extend .text-uppercase;
-    background-color: #fff!important;
-    border-right: none!important;
-    color: #00cf70;
-    font-weight: bold;
-  }
-
-  .source,
-  .target {
-
-    input, span {
-      background-color: white;
-      box-shadow: none!important;
-      border: 1px solid #ccc!important;
-      border-left: none!important;
-      text-align: right;
-      font-weight: bold;
-    }
-
-    input:focus {
-      z-index: 0;
-    }
-
-    select {
-      border-left: none;
-      background-color: #ececec;
-      font-weight: bold;
-
-      option {
-        font-weight: bold;
-      }
-    }
-  }
-
-  .source {
-    input {
-      padding-left: 2.75em;
-    }
-  }
-
-  i {
-    font-size: 36px;
-    color: #00cf70;
   }
 }
 
