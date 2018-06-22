@@ -7,31 +7,69 @@ body {
 }
 
 
+@media (min-width: 576px) {
+  .form-inline, .input-group {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-inline, .input-group {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    width: auto !important;
+  }
+}
+
+
 .exchange {
 
+  .you-get,
   .you-have {
     @extend .text-uppercase;
     background-color: #fff!important;
     border-right: none!important;
     color: #00cf70;
+    font-weight: bold;
   }
 
-  .you-get {
-    @extend .you-have;
+  .source,
+  .target {
+
+    input, span {
+      background-color: white;
+      box-shadow: none!important;
+      border: 1px solid #ccc!important;
+      border-left: none!important;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    input:focus {
+      z-index: 0;
+    }
+
+    select {
+      border-left: none;
+      background-color: #ececec;
+      font-weight: bold;
+
+      option {
+        font-weight: bold;
+      }
+    }
   }
 
-  .source-currency {
-    border-left: none!important;
+  .source {
+    input {
+      padding-left: 2.75em;
+    }
   }
 
-  .source-currency:focus {
-    outline: none!important;
-    box-shadow: none!important;
-    border: 1px solid #ccc!important;
-    border-left: none!important;
-  }
-
-  .target-currency {
-    @extend .source-currency
+  i {
+    font-size: 36px;
+    color: #00cf70;
   }
 }
+
