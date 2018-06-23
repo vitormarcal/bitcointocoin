@@ -1,4 +1,14 @@
 $(document).ready ->
+
+  $input = $('#amount')
+
+
+  $input.on 'focusout', ->
+    $('#result').val("")
+    enviar()
+    return
+
+
   $('.change-values').click () ->
     sourceCurrency = $('#source_currency').val()
     targetCurrency = $('#target_currency').val()
