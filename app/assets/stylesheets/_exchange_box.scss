@@ -1,61 +1,61 @@
-.exchange_box{
+.exchange {
+  padding-right: 15px;
+  padding-left: 15px;
 
-  .card{
-    border: 0;
+  form > div:nth-child(3n) {
+    width: 8% !important;
+    margin: 0 auto;
+  }
 
-    .card-header{
-      background-color: #878d99;
-      border-radius: 0;
-      color: white;
-      font-weight: 700;
+
+  .you-get,
+  .you-have {
+    @extend .text-uppercase;
+    background-color: #fff!important;
+    border-right: none!important;
+    color: #00cf70;
+    font-weight: bold;
+  }
+
+  .source,
+  .target {
+
+    input, span {
+      background-color: white;
+      box-shadow: none!important;
+      border: 1px solid #ccc!important;
+      border-left: none!important;
+      text-align: right;
+      font-weight: bold;
     }
 
-    .card-block{
-      padding-top: 10px;
-      padding: 20px;
-
-      .title{
-        color: #878d99;
-        font-weight: 700;
-      }
-
-      .btn-exchange{
-        background-color: #5bc0de;
-        border-color: #5bc0de;
-        border-radius: 0;
-      }
+    input:focus {
+      z-index: 0;
     }
-  }
-}
 
-@media only screen and (max-width : 992px) {
-  .card-header {
-    font-size: 25px;
-  }
-
-  .title{
-    margin-top: 30px;
-    font-size: 20px;
-  }
-
-  .form-group {
     select {
-      font-size: 20px;
-      height: 50px !important;
-    }
+      border-left: none;
+      background-color: #ececec;
+      font-weight: bold;
 
+      option {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .source {
     input {
-      font-size: 20px;
-      height: 50px;
+      padding-left: 2.75em;
     }
   }
 
-
-  #result {
-    margin-bottom: 20px;
+  i {
+    font-size: 36px;
+    color: #00cf70;
   }
 
-  .btn-exchange {
-    font-size: 20px;
+  i:focus, i:hover {
+    color: white;
   }
 }
