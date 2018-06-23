@@ -2,6 +2,12 @@
   padding-right: 15px;
   padding-left: 15px;
 
+  form > div:nth-child(3n) {
+    width: 8% !important;
+    margin: 0 auto;
+  }
+
+
   .you-get,
   .you-have {
     @extend .text-uppercase;
