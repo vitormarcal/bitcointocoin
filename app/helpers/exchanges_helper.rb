@@ -1,6 +1,14 @@
+require 'rest-client'
+require 'json'
+
 module ExchangesHelper
 
   def currency_list
-    %w(AUD BGN BRL CAD CHF CNY CZK DKK EUR GBP HKD HRK HUF IDR ILS INR JPY KRW MXN MYR NOK NZD PHP PLN RON RUB SEK SGD THB TRY USD ZAR)
+    begin
+      res = JSON.parse(RestClient.get('https://www.cryptonator.com/api/currencies').body)['rows']
+      res.map { |x| x['code']}
+    rescue RestClient::ExceptionWithResponse => e
+      e.response
+    end
   end
 end
