@@ -30,6 +30,29 @@ RSpec.configure do |config|
       ]
     }', headers: {})
     
+    stub_request(:get, "https://api.cryptonator.com/api/ticker/USD-BRL").
+    with(
+      headers: {
+  	  'Accept'=>'*/*',
+  	  'Accept-Encoding'=>'gzip, deflate',
+  	  'Host'=>'api.cryptonator.com',
+  	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
+      }).
+    to_return(status: 200, body: "", headers: '{
+        {
+          "ticker": {
+                "base": "BTC",
+                "target": "USD",
+                "price": "6305.43971026",
+                "volume": "80842.97426477",
+                "change": "134.62440295"
+          },
+          "timestamp": 1529938861,
+          "success": true,
+          "error": ""
+          }
+    }')
+    
     stub_request(:get, /currencydatafeed.com/ )
         .with(headers: {
             'Accept'=>'*/*'
