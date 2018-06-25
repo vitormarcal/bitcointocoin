@@ -6,6 +6,12 @@ body {
   background-size: cover;
 }
 
+/*Responsive Mode */
+@media screen and (max-width: 768px) {
+  background: url(/background-img.jpg) no-repeat center center fixed #000;
+  background-size: contain;
+}
+
 .main {
   margin-top: 5.2rem;
 }
