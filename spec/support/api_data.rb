@@ -50,8 +50,8 @@ RSpec.configure do |config|
           "timestamp": 1529938861,
           "success": true,
           "error": ""
-          }
-    }', headers: {})
+       }
+    ', headers: {})
     
     stub_request(:get, /currencydatafeed.com/ )
         .with(headers: {
