@@ -50,3 +50,5 @@ $(document).ready ->
 
   isValid = (value) ->
     return value != null and value.trim() != ''
+
+  enviar()
