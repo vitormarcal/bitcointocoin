@@ -38,7 +38,7 @@ RSpec.configure do |config|
   	  'Host'=>'api.cryptonator.com',
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
-    to_return(status: 200, body: "", headers: '{
+    to_return(status: 200, body: '{
         {
           "ticker": {
                 "base": "BTC",
@@ -51,7 +51,7 @@ RSpec.configure do |config|
           "success": true,
           "error": ""
           }
-    }')
+    }', headers: {})
     
     stub_request(:get, /currencydatafeed.com/ )
         .with(headers: {
