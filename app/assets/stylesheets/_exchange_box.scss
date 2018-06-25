@@ -29,6 +29,10 @@
       font-weight: bold;
     }
 
+    input {
+      padding-left: 2.75em;
+    }
+
     input:focus {
       z-index: 0;
     }
@@ -41,12 +45,6 @@
       option {
         font-weight: bold;
       }
-    }
-  }
-
-  .source {
-    input {
-      padding-left: 2.75em;
     }
   }
 
