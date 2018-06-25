@@ -39,7 +39,6 @@ RSpec.configure do |config|
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '{
-        {
           "ticker": {
                 "base": "BTC",
                 "target": "USD",
