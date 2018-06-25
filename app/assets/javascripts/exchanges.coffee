@@ -1,9 +1,21 @@
 $(document).ready ->
 
   $input = $('#amount')
+  $source_currency = $('#source_currency')
+  $target_currency = $('#target_currency')
 
 
   $input.on 'focusout', ->
+    $('#result').val("")
+    enviar()
+    return
+  
+  $source_currency.on 'focusout', ->
+    $('#result').val("")
+    enviar()
+    return
+  
+  $target_currency.on 'focusout', ->
     $('#result').val("")
     enviar()
     return
