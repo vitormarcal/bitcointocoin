@@ -9,7 +9,26 @@ RSpec.configure do |config|
   	  'Host'=>'www.cryptonator.com',
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
-    to_return(status: 200, body: "", headers: {})
+    to_return(status: 200, body: '
+    {
+      "rows": [
+              {
+                "code": "BRL",
+                "name": "Brazilian Real",
+                "statuses": [
+                    "secondary"
+                ]
+                },
+              {
+                "code": "USD",
+                "name": "US Dollar",
+                "statuses": [
+                "primary",
+                "secondary"
+              ]
+             }
+      ]
+    }', headers: {})
     
     stub_request(:get, /currencydatafeed.com/ )
         .with(headers: {
