@@ -1,7 +1,7 @@
 RSpec.configure do |config|
   config.before(:each) do
     
-    stub_request(:get, "https://www.cryptonator.com/api/currencies").
+    stub_request(:get, 'https://www.cryptocompare.com/api/data/coinlist/').
     with(
       headers: {
   	  'Accept'=>'*/*',
@@ -11,26 +11,17 @@ RSpec.configure do |config|
       }).
     to_return(status: 200, body: '
     {
-      "rows": [
+      "Data": [
               {
-                "code": "BRL",
-                "name": "Brazilian Real",
-                "statuses": [
-                    "secondary"
-                ]
-                },
+                "Symbol": "BTC"
+              },
               {
-                "code": "USD",
-                "name": "US Dollar",
-                "statuses": [
-                "primary",
-                "secondary"
-              ]
+                "Symbol": "USDT"
              }
       ]
     }', headers: {})
     
-    stub_request(:get, "https://api.cryptonator.com/api/ticker/USD-BRL").
+    stub_request(:get, "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD").
     with(
       headers: {
   	  'Accept'=>'*/*',
@@ -39,17 +30,8 @@ RSpec.configure do |config|
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '{
-          "ticker": {
-                "base": "BTC",
-                "target": "USD",
-                "price": "6305.43971026",
-                "volume": "80842.97426477",
-                "change": "134.62440295"
-          },
-          "timestamp": 1529938861,
-          "success": true,
-          "error": ""
-       }
+        "USD": 23848.43
+      }
     ', headers: {})
     
     stub_request(:get, /currencydatafeed.com/ )
