@@ -3,11 +3,15 @@ $(document).ready ->
   $input = $('#amount')
   $source_currency = $('#source_currency')
   $target_currency = $('#target_currency')
+  delay = 3000
 
 
-  $input.on 'focusout', ->
-    $('#result').val("")
-    enviar()
+  $input.on 'keyup', (e) ->
+    clearTimeout delay
+    delay = setTimeout((->
+      enviar()
+      return
+    ), 3000)
     return
   
   $source_currency.on 'focusout', ->
