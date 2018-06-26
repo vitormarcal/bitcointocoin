@@ -20,6 +20,8 @@
   .source,
   .target {
 
+    height: 50px!important;
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
       /* display: none; <- Crashes Chrome on hover */
@@ -34,10 +36,13 @@
       border-left: none!important;
       text-align: right;
       font-weight: bold;
+      height: 50px!important;
     }
 
     input {
       padding-left: 2.75em;
+      font-size: 22px;
+      line-height: 48px;
     }
 
     input:focus {
@@ -48,6 +53,7 @@
       border-left: none;
       background-color: #ececec;
       font-weight: bold;
+      height: 50px!important;
 
       option {
         font-weight: bold;
@@ -58,6 +64,8 @@
   i {
     font-size: 36px;
     color: #00cf70;
+    padding-left: 16px;
+    padding-right: 4px;
   }
 
   i:focus, i:hover {
