@@ -15,13 +15,4 @@ class ExchangeService
       e.response
     end
   end
-
-  def listCoins
-    begin
-      res = JSON.parse(RestClient.get('https://www.cryptonator.com/api/currencies').body)['rows']
-      res.map { |rd| rd['code']}
-    rescue RestClient::ExceptionWithResponse => e
-      e.response
-    end
-  end
 end
