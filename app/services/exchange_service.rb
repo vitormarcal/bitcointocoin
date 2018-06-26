@@ -5,12 +5,9 @@ class ExchangeService
 
   def perform(source_currency, target_currency, amount)
     begin
-      url = "https://api.cryptonator.com/api/ticker/#{source_currency}-#{target_currency}"
-      puts "GET to #{url}"
+      url = "https://min-api.cryptocompare.com/data/price?fsym=#{source_currency}&tsyms=#{target_currency}"
       res = RestClient.get url
-      puts "Response #{res}"
-      value = JSON.parse(res.body)['ticker']['price'].to_f
-      value * amount.to_f
+      JSON.parse(res.body)[target_currency].to_f * amount.to_f
     rescue RestClient::ExceptionWithResponse => e
       e.response
     end
