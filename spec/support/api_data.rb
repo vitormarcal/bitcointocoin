@@ -4,7 +4,10 @@ RSpec.configure do |config|
     stub_request(:get, 'https://www.cryptocompare.com/api/data/coinlist/').
     with(
       headers: {
-          'Accept'=>'*/*'
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip, deflate',
+          'Host'=>'www.cryptocompare.com',
+          'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '
     {
@@ -24,7 +27,7 @@ RSpec.configure do |config|
       headers: {
   	  'Accept'=>'*/*',
   	  'Accept-Encoding'=>'gzip, deflate',
-  	  'Host'=>'api.cryptonator.com',
+  	  'Host'=>'min-api.cryptocompare.com',
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '{
