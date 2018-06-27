@@ -6,7 +6,7 @@ RSpec.configure do |config|
       headers: {
   	  'Accept'=>'*/*',
   	  'Accept-Encoding'=>'gzip, deflate',
-  	  'Host'=>'www.cryptonator.com',
+  	  'Host'=>'www.cryptocompare.com',
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '
@@ -16,11 +16,11 @@ RSpec.configure do |config|
                 "Symbol": "BTC"
               },
               {
-                "Symbol": "USDT"
+                "Symbol": "USD"
              }
       ]
     }', headers: {})
-    
+
     stub_request(:get, "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD").
     with(
       headers: {
