@@ -8,13 +8,14 @@ RSpec.configure do |config|
       }).
     to_return(status: 200, body: '
     {
-      "Data":
+      "Data": {
              "BTC": {
                 "Symbol": "BTC"
               },
              "USD": {
                 "Symbol": "USD"
              }
+      }
 
     }', headers: {})
 
