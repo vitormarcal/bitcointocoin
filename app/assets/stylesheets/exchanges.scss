@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background: image-url("/background-img.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -13,17 +18,26 @@ body {
     background-size: contain;
   }
 }
-footer {
+
+.main {
+  margin-top: 5.2rem;
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
+}
+
+
+.footer {
   color: white;
   position: absolute;
   bottom: 0;
   height: 60px;
   line-height: 60px;
   width: auto;
-}
-
-.main {
-  margin-top: 5.2rem;
 }
 
 .title-box {
