@@ -47,6 +47,10 @@ h1,h2 {
   .form-inline, .input-group {
     width: 100% !important;
   }
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -57,4 +61,3 @@ h1,h2 {
     width: auto !important;
   }
 }
-
