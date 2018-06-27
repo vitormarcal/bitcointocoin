@@ -13,6 +13,13 @@ body {
     background-size: contain;
   }
 }
+footer {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+}
 
 .main {
   margin-top: 5.2rem;
@@ -22,6 +29,10 @@ body {
   margin-top: 20%;
   margin-left: 15px;
 }
+a {
+  color: #00cf70;
+}
+
 h1 {
   font-size: 2.1rem;
 }
