@@ -22,7 +22,7 @@ RSpec.configure do |config|
 
     }', headers: {})
 
-    stub_request(:get, "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD").
+    stub_request(:get, "https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=BRL").
     with(
       headers: {
   	  'Accept'=>'*/*',
@@ -31,7 +31,7 @@ RSpec.configure do |config|
   	  'User-Agent'=>'rest-client/2.0.2 (linux-gnu x86_64) ruby/2.5.1p57'
       }).
     to_return(status: 200, body: '{
-        "USD": 23848.43
+        "BRL": 3.91
       }
     ', headers: {})
     
